@@ -8,9 +8,9 @@ if (!signal_exists(argument0)) {
     exit;
 }
 var _callbacks, _arguments, _registrars, i;
-_callbacks = ds_map_find_value(variable_instance_get(id, MC_EVENT_CALLBACKS_VARNAME), argument0);
-_arguments = ds_map_find_value(variable_instance_get(id, MC_EVENT_ARGUMENTS_VARNAME), argument0);
-_registrars = ds_map_find_value(variable_instance_get(id, MC_EVENT_REGISTRARS_VARNAME), argument0);
+_callbacks = ds_map_find_value(variable_instance_get(id, _SIGNAL_CALLBACKS_VARNAME), argument0);
+_arguments = ds_map_find_value(variable_instance_get(id, _SIGNAL_ARGUMENTS_VARNAME), argument0);
+_registrars = ds_map_find_value(variable_instance_get(id, _SIGNAL_REGISTRARS_VARNAME), argument0);
 i = ds_list_size(_callbacks) - 1;
 while (i >= 0) {
     with (ds_list_find_value(_registrars, i)) {

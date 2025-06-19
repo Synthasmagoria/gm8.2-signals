@@ -8,7 +8,7 @@ var _map, _key, _keyNumber;
     NOTE: ds_map_find_first and ds_map_find_next can be slow.
     Create an iterable map if this causes performance problems
 */
-_map = variable_instance_get(id, MC_EVENT_CALLBACKS_VARNAME);
+_map = variable_instance_get(id, _SIGNAL_CALLBACKS_VARNAME);
 _keyIndex = ds_map_size(_map) - 1;
 _key = ds_map_find_first(_map);
 while (_keyIndex >= 0) {
@@ -18,7 +18,7 @@ while (_keyIndex >= 0) {
 }
 ds_map_destroy(_map);
 
-_map = variable_instance_get(id, MC_EVENT_ARGUMENTS_VARNAME);
+_map = variable_instance_get(id, _SIGNAL_ARGUMENTS_VARNAME);
 _keyIndex = ds_map_size(_map) - 1;
 _key = ds_map_find_first(_map);
 var _args, i;
@@ -35,7 +35,7 @@ while (_keyIndex >= 0) {
 }
 ds_map_destroy(_map);
 
-_map = variable_instance_get(id, MC_EVENT_REGISTRARS_VARNAME);
+_map = variable_instance_get(id, _SIGNAL_REGISTRARS_VARNAME);
 _keyIndex = ds_map_size(_map) - 1;
 _key = ds_map_find_first(_map);
 while (_keyIndex >= 0) {
