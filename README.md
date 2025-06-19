@@ -10,4 +10,4 @@ Emit the signal in from the instance owning the signal with `signal_emit()`
 
 ![setup](https://github.com/user-attachments/assets/bb22e735-876e-4074-9798-bd79ace6fea8)
 
-For example usage see: < youtube video in progress >
+For example usage see: https://youtu.be/B_rbNxNllgA
